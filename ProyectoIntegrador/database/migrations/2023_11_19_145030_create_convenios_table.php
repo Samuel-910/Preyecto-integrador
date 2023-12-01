@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('convenio_tipoConvenio', 50);
             $table->date('convenio_fechaInicio');
             $table->date('convenio_fechaFin');
-            $table->string('convenio_estado', 20);
-            $table->foreignId('emp_id')->constrained('empresas');
+            $table->string('convenio_estado')->default('En proceso');
+            $table->unsignedBigInteger('emp_id');
+            $table->foreign('emp_id')->references('id')->on('empresas')->onDelete('cascade');
             $table->foreignId('practicante_id')->constrained('practicantes');
             $table->string('convenio_archivo', 300);
             $table->timestamps();

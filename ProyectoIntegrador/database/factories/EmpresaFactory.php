@@ -27,7 +27,6 @@ class EmpresaFactory extends Factory
             'emp_correo' => $correo,
             'emp_celular' => $numero,
             'emp_ruc' => $ruc,
-            'emp_password' => $numero,
             'user_id' =>User::all()->unique()->random()->id,
         ];
     }

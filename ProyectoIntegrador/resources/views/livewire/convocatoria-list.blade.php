@@ -104,5 +104,5 @@
                 icon: "{{ session('alert.icon') }}",
             });
         </script>
-        @endif
+    @endif
 </x-app-layout>

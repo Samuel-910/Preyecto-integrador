@@ -12,35 +12,50 @@ class PermissionSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(){
-        //Dashboard
+        // 1
         Permission::create([
             'name'=>'Ver dashboard'
         ]);
-        //Clientes
+        // 2
         Permission::create([
             'name'=>'convocatoriapracticante'
         ]);
+        // 3
         Permission::create([
             'name'=>'sede'
         ]);
+        // 4
         Permission::create([
             'name'=>'cartapresentacion'
         ]);
+        // 5
         Permission::create([
             'name'=>'planppp'
         ]);
-        //Productos
+        // 6
         Permission::create([
             'name'=>'documentos'
         ]);
+        // 7
         Permission::create([
             'name'=>'convocoor'
         ]);
+        // 8
         Permission::create([
-            'name'=>'evidencia'
+            'name'=>'validar'
         ]);
+        // 9
         Permission::create([
             'name'=>'validardoc'
+        ]);
+        // 10
+        Permission::create([
+            'name'=>'supervicion'
+        ]);
+
+        // 11
+        Permission::create([
+            'name'=>'consolidado'
         ]);
     }
 }

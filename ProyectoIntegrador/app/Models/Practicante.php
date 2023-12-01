@@ -49,4 +49,9 @@ class Practicante extends Model
     {
         return $this->hasMany(InscripcionConvocatoria::class);
     }
+
+    public function empresa()
+    {
+        return $this->belongsTo(Practicante::class);
+    }
 }

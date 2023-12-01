@@ -14,4 +14,9 @@ class CartaAceptacion extends Model
     {
         return $this->belongsTo(Practicante::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class); // Ajusta el nombre del modelo de usuario si es diferente
+    }
 }

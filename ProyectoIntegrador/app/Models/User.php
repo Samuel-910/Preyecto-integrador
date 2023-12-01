@@ -61,4 +61,8 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    public function cartasPresentacion()
+    {
+        return $this->hasMany(CartaPresentacion::class);
+    }
 }

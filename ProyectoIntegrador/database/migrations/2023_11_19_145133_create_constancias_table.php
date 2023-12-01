@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('constancia_archivo', 300);
             $table->foreignId('practicante_id')->constrained('practicantes');
+            $table->string('constancia_estado')->default('En proceso');
             $table->timestamps();
         });
     }

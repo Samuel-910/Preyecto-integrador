@@ -24,7 +24,8 @@ return new class extends Migration
             $table->date('convocatoria_fechaFin');
             $table->string('convocatoria_estado')->default('En proceso');
             $table->tinyInteger('convocatoria_forma_aca');
-            $table->foreignId('emp_id')->constrained('empresas');
+            $table->unsignedBigInteger('emp_id');
+            $table->foreign('emp_id')->references('id')->on('empresas')->onDelete('cascade');
             $table->timestamps();
         });
     }

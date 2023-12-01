@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('emp_correo', 100);
             $table->bigInteger('emp_celular')->unsigned();
             $table->bigInteger('emp_ruc')->unsigned();
-            $table->string('emp_password');
-            $table->foreignId('user_id')->constrained('users');
+            $table->string('emp_valido')->default('En proceso');
+            $table->foreignId('user_id')->constrained('users')->default('Todavia');
             $table->timestamps();
         });
     }

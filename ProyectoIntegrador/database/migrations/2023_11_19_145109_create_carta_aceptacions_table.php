@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('acep_direccion', 100);
             $table->string('acep_ubigeo', 200);
             $table->string('acep_coordenadas', 300);
+            $table->string('acep_estado')->default('En proceso');
             $table->timestamps();
         });
     }
